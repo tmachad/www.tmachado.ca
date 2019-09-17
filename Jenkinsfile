@@ -17,7 +17,7 @@ pipeline {
                 echo 'Deploying....'
 				fileOperations([
 					fileDeleteOperation(
-						includes: '/deployment/index.html', 
+						includes: '/deployment/*.html',
 						excludes: ''
 					),
 					fileCopyOperation(
