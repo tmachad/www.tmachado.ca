@@ -15,10 +15,18 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
-				fileOperations {
-					fileDeleteOperation('/deployment/index.html', '')
-					fileCopyOperation('index.html', '', '/deployment', false)
-				}
+				fileOperations([
+					fileDeleteOperation(
+						includes: '/deployment/index.html', 
+						excludes: ''
+					),
+					fileCopyOperation(
+						includes: 'index.html', 
+						excludes: '', 
+						targetLocation: '/deployment', 
+						flattenFiles: false
+					)
+				])
             }
         }
     }
