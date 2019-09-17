@@ -5,7 +5,6 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-				sh 'echo $PWD'
             }
         }
         stage('Test') {
@@ -16,6 +15,10 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
+				fileOperations {
+					fileDeleteOperation('/deployment/index.html', '')
+					fileCopyOperation('index.html', '', '/deployment', false)
+				}
             }
         }
     }
