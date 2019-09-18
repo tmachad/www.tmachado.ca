@@ -15,18 +15,21 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
-				fileOperations([
-					fileDeleteOperation(
-						includes: '/deployment/*.html',
-						excludes: ''
-					),
-					fileCopyOperation(
-						includes: 'index.html', 
-						excludes: '', 
-						targetLocation: '/deployment', 
-						flattenFiles: false
-					)
-				])
+				sshPublisher(
+					continueOnError: false,
+					failOnError: true,
+					publishers: [
+						sshPublisherDesc(
+							configName: "Website Server",
+							verbose: true,
+							transfers: [
+								sshTransfer(
+									sourceFiles: "index.html"
+								)
+							]
+						)
+					]
+				)
             }
         }
     }
