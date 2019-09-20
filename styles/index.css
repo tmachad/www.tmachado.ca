@@ -1,0 +1,147 @@
+/* Overall Styles */
+
+section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+img {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+ul.vertical-list {
+    padding: 0;
+    list-style: none;
+}
+
+ul.horizontal-list {
+    padding: 0;
+}
+
+ul.horizontal-list li {
+    display: inline-block;
+}
+
+a.social-link {
+    color: inherit;
+}
+
+.social-link {
+    display: block;
+    line-height: 2.5rem;
+
+    background-color: #444444;
+
+    border-radius: 50%;
+    
+    height: 2.5rem;
+    width: 2.5rem;
+
+    font-size: 1.25rem;
+}
+
+/* Intro Section Styles */
+
+.intro {
+    margin-top: 100px;
+    background-color: #222222;
+}
+
+.profile-image {
+    top: -100px;
+
+    margin: 0px auto -70px;
+    position: relative;
+
+    height: 200px;
+    width: 200px;
+}
+
+.profile-image img {
+    height: 200px;
+    width: 200px;
+}
+
+.intro-section {
+    position: relative;
+    padding-bottom: 0;
+}
+
+.intro-section::before {
+    content: "";
+    
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 4rem;
+
+    background-color: #222222;
+}
+
+/* Project Section Styles */
+
+.projects-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+.project-item {
+    flex: none;
+
+    max-height: 100vh;
+    width: 200px;
+    margin: 1rem;
+
+    transition: transform 1s 1s, 
+                opacity 1s 1s,
+                max-height 1s,
+                /*width 1s, */
+                margin 1s, 
+                padding 1s, 
+                border 1s;
+}
+
+.project-item.hide {
+    transform: translateY(-100%);
+    opacity: 0;
+
+    max-height: 0;
+    /*width: 0;*/
+    margin: 0 -100px;
+    padding: 0;
+    border: 0;
+
+    transition: transform 1s, 
+                opacity 1s,
+                max-height 1s 1s, 
+                /*width 1s 1s, */
+                margin 1s 1s,
+                padding 1s 1s, 
+                border 1s 1s;
+}
+
+/* About Section Styles */
+
+/* Work Experience Section Styles */
+
+#work-experience {
+    box-shadow: inset 0px 0px 10px 0px black;
+}
+
+/* Education Section Styles */
+
+/* Testing Styles */
+
+.square {
+    height: 200px;
+    width: 200px;
+
+    background-color: red;
+    border: 3px solid lime;
+}
