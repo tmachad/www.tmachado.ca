@@ -24,7 +24,7 @@ pipeline {
 							verbose: true,
 							transfers: [
 								sshTransfer(
-									sourceFiles: "index.html"
+									sourceFiles: "*.html, /images/**, /scripts/**/*.js, /styles/**/*.css"
 								)
 							]
 						)
