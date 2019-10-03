@@ -1,7 +1,20 @@
 pipeline {
     agent any
-
+    options {
+        skipDefaultCheckout true
+    }
+    
     stages {
+        stage('Pre-Checkout') {
+            steps {
+                sh 'git lfs install'
+            }
+        }
+        stage('Checkout') {
+            steps {
+                checkout scm
+            }
+        }
         stage('Build') {
             steps {
                 echo 'Building..'
