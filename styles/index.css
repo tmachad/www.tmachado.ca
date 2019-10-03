@@ -132,6 +132,34 @@ a.social-link {
                 border 1s 1s;
 }
 
+.project-item .preview {
+    height: 200px;
+    width: 200px;
+
+    line-height: 200px;
+    font-size: 6rem;
+}
+
+.project-item .preview {
+    background-color: #707070;
+    color: #ffffff80;
+}
+
+.project-item.game .preview {
+    background-color: #43912f;
+    color: #ffffff80;
+}
+
+.project-item.web-dev .preview {
+    background-color: #2189b3;
+    color: #ffffff80;
+}
+
+.project-item.tool .preview {
+    background-color: #bb771f;
+    color: #ffffff80;
+}
+
 /* About Section Styles */
 
 /* Work Experience Section Styles */
