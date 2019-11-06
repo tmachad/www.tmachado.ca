@@ -26,6 +26,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"
         integrity="sha256-zmfNZmXoNWBMemUOo1XUGFfc0ihGGLYdgtJS3KCr/l0=" crossorigin="anonymous" />
 
+    <!-- Tag Input -->
+    <script src="node_modules/typeahead.js/dist/typeahead.bundle.js"></script>
+    <script src="node_modules/jq-tag-input/jq-tag-input.min.js"></script>
+    <link rel="stylesheet" href="node_modules/jq-tag-input/jq-tag-input.min.css">
+
     <!-- Custom Styles -->
     <link rel="stylesheet" href="styles/index.css">
 
@@ -93,9 +98,7 @@
                     </h3>
                 </div>
                 <div class="col-8">
-                    <p class="text-center">
-                        <i>Search feature coming soon!</i>
-                    </p>
+                    <input id="project-search" type="text">
                 </div>
             </div>
         </div>
@@ -107,7 +110,7 @@
                 <h4 class="mt-2 mb-0">
                     What Should I Play?
                 </h4>
-                <div class="mb-2">
+                <div class="tags mb-2">
                     <span class="badge badge-primary">Web</span>
                     <span class="badge badge-primary">Angular</span>
                     <span class="badge badge-primary">HTML</span>
@@ -129,7 +132,7 @@
                 <h4 class="mt-2 mb-0">
                     Superposition
                 </h4>
-                <div class="mb-2">
+                <div class="tags mb-2">
                     <span class="badge badge-primary">Game</span>
                     <span class="badge badge-primary">Unity</span>
                     <span class="badge badge-primary">C#</span>
@@ -149,7 +152,7 @@
                 <h4 class="mt-2 mb-0">
                     FileSync
                 </h4>
-                <div class="mb-2">
+                <div class="tags mb-2">
                     <span class="badge badge-primary">Tool</span>
                     <span class="badge badge-primary">MVC</span>
                     <span class="badge badge-primary">C#</span>
@@ -168,7 +171,7 @@
                 <h4 class="mt-2 mb-0">
                     Sudoku Solver
                 </h4>
-                <div class="mb-2">
+                <div class="tags mb-2">
                     <span class="badge badge-primary">TypeScript</span>
                 </div>
                 <p class="text-justify">
@@ -186,7 +189,7 @@
                 <h4 class="mt-2 mb-0">
                     Personal Website
                 </h4>
-                <div class="mb-2">
+                <div class="tags mb-2">
                     <span class="badge badge-primary">Web</span>
                     <span class="badge badge-primary">HTML</span>
                     <span class="badge badge-primary">CSS</span>
@@ -206,7 +209,7 @@
                 <h4 class="mt-2 mb-0">
                     AD Tower Defence
                 </h4>
-                <div class="mb-2">
+                <div class="tags mb-2">
                     <span class="badge badge-primary">Game</span>
                     <span class="badge badge-primary">Unity</span>
                     <span class="badge badge-primary">C#</span>
@@ -226,7 +229,7 @@
                 <h4 class="mt-2 mb-0">
                     State Machines
                 </h4>
-                <div class="mb-2">
+                <div class="tags mb-2">
                     <span class="badge badge-primary">Java</span>
                 </div>
                 <p class="text-justify">
@@ -243,7 +246,7 @@
                 <h4 class="mt-2 mb-0">
                     Minecraft Slots
                 </h4>
-                <div class="mb-2">
+                <div class="tags mb-2">
                     <span class="badge badge-primary">Game</span>
                     <span class="badge badge-primary">Turing</span>
                 </div>

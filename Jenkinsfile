@@ -18,6 +18,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
+                sh 'npm install'
             }
         }
         stage('Test') {
@@ -37,7 +38,7 @@ pipeline {
 							verbose: true,
 							transfers: [
 								sshTransfer(
-									sourceFiles: "*.html, images/**/*, scripts/**/*.js, styles/**/*.css"
+									sourceFiles: "*.html, images/**/*, scripts/**/*.js, styles/**/*.css, node_modules/**/*"
 								)
 							]
 						)

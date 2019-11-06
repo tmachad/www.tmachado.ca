@@ -1,0 +1,23 @@
+{
+  "name": "www.tmachado.ca",
+  "version": "1.0.0",
+  "description": "This is my website! This is just the initial readme.",
+  "main": "index.html",
+  "dependencies": {
+    "jq-tag-input": "^1.1.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tmachad/www.tmachado.ca.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tmachad/www.tmachado.ca/issues"
+  },
+  "homepage": "https://github.com/tmachad/www.tmachado.ca#readme"
+}

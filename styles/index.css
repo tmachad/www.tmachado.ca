@@ -160,6 +160,19 @@ a.social-link {
     color: #ffffff80;
 }
 
+.tt-menu {
+    cursor: pointer;
+}
+
+.tt-suggestion:hover {
+    font-weight: bold;
+}
+
+.tt-cursor {
+    font-weight: bold;
+    text-decoration-line: underline;
+}
+
 /* About Section Styles */
 
 /* Work Experience Section Styles */

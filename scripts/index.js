@@ -1,18 +1,66 @@
 $(document).ready(function() {
-    // $(".nav .nav-link").click(function(e) {
-    //     e.preventDefault();
+    let possibleTags = $(".project-item span.badge").map(function() {
+        return this.innerText
+    });
+    let uniqueTags = [...new Set(possibleTags)].sort();
 
-    //     let self = $(this);
-    //     self.closest(".nav").find(".nav-link").removeClass("active");
-    //     self.addClass("active");
+    $("#project-search").tagInput({
+        classNames: {
+            overall: "tag-input form-control h-auto",
+            tag: "tag badge badge-primary"
+        },
+        useDefaultStyle: false,
+        typeaheadjs: {
+            classNames: {
+                menu: "tt-menu form-control my-2 ml-n2 h-auto w-auto"
+            },
+            datasets: [
+                {
+                    name: "tags",
+                    source: function(query, callback) {
+                        let matches = [];
+                        let regex = RegExp(query, "i");
 
-    //     let filter = self.attr("data-filter");
+                        uniqueTags.forEach((tag) => {
+                            if (regex.test(tag)) {
+                                matches.push(tag);
+                            }
+                        });
 
-    //     $(".project-item").removeClass("hide");
+                        callback(matches);
+                    }
+                }
+            ]
+        }
+    });
 
-    //     if (filter !== "") {
-    //         // Hide elements not matching filter
-    //         $(`.project-item:not(${filter})`).addClass("hide");
-    //     }
-    // });
+    $("#project-search").change(function() {
+        let val = $(this).val();
+        let searchTags = val == "" ? [] : val.split(",");
+        
+
+        if (searchTags.length > 0) {
+            // There are tags to search by, so filter project items by them
+            $(".project-item").each(function() {
+                let elem = $(this);
+                let tags = elem.find("span.badge").map(function() {
+                    return this.innerText;
+                }).get();
+                
+                let result = true;
+                searchTags.forEach(tag => result = result && tags.includes(tag));
+
+                if (result) {
+                    elem.removeClass("hide");
+                } else {
+                    elem.addClass("hide");
+                }
+            });
+        } else {
+            // No tags to search by, so show all projects
+            $(".project-item").each(function() {
+                $(this).removeClass("hide");
+            })
+        }
+    });
 });
