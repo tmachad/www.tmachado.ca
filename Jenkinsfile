@@ -35,10 +35,9 @@ pipeline {
 					publishers: [
 						sshPublisherDesc(
 							configName: "Website Server",
-							verbose: true,
 							transfers: [
 								sshTransfer(
-									sourceFiles: "*.html, images/**/*, scripts/**/*.js, styles/**/*.css, node_modules/**/*"
+									sourceFiles: "**/*.html, images/**/*, scripts/**/*.js, styles/**/*.css, node_modules/**/*"
 								)
 							]
 						)
