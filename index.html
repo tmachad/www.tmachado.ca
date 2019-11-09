@@ -7,587 +7,212 @@
 
     <meta charset="utf-8" />
 
+    <!-- JQuery -->
+    <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+
     <!-- Bootstrap JavaScript -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
-
-    <!-- Bootstrap CSS (Darkly theme) -->
-    <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/darkly/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-w+8Gqjk9Cuo6XH9HKHG5t5I1VR4YBNdPt/29vwgfZR485eoEJZ8rJRbm3TR32P6k" crossorigin="anonymous">
-
-    <!-- FontAwesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"
-        integrity="sha256-zmfNZmXoNWBMemUOo1XUGFfc0ihGGLYdgtJS3KCr/l0=" crossorigin="anonymous" />
+    <script src="/node_modules/popper.js/dist/popper.min.js"></script>
+    <script src="/node_modules/bootstrap/js/dist/index.js"></script>
 
     <!-- Tag Input -->
-    <script src="node_modules/typeahead.js/dist/typeahead.bundle.js"></script>
-    <script src="node_modules/jq-tag-input/jq-tag-input.min.js"></script>
-    <link rel="stylesheet" href="node_modules/jq-tag-input/jq-tag-input.min.css">
+    <script src="/node_modules/typeahead.js/dist/typeahead.bundle.js"></script>
+    <script src="/node_modules/jq-tag-input/jq-tag-input.min.js"></script>
+    <link rel="stylesheet" href="/node_modules/jq-tag-input/jq-tag-input.min.css">
 
-    <!-- Custom Styles -->
-    <link rel="stylesheet" href="styles/index.css">
+    <!-- Styles -->
+    <link rel="stylesheet" href="/styles/index.css">
 
     <!-- Custom Scripts -->
-    <script src="scripts/index.js"></script>
+    <script src="/scripts/index.js"></script>
 </head>
 
 <body>
-    <header>
-
-    </header>
-    <section class="bg-primary intro-section">
-        <!-- Intro Section -->
-        <div class="container">
-            <div class="row">
-                <div class="col-md-1 col-lg-2"></div>
-                <div class="col-md-10 col-lg-8">
-                    <div class="intro text-center">
-                        <div class="profile-image">
-                            <img src="images/headshot_angle.jpg" class="rounded-circle">
-                        </div>
-                        <h2>
-                            <b>
-                                Thomas Machado
-                            </b>
-                        </h2>
-                        <h4>
-                            Software Developer
-                        </h4>
-                        <ul class="vertical-list my-4">
-                            <li class="my-1">
-                                <b>Email:</b> tm2010@hotmail.ca
-                            </li>
-                            <li class="my-1">
-                                <b>Phone:</b> (519) 520 4530
-                            </li>
-                        </ul>
-                        <ul class="horizontal-list mb-0">
-                            <li class="mx-1">
-                                <a class="social-link" href="https://www.linkedin.com/in/tom-machado/" target="_blank">
-                                    <i class="fab fa-linkedin-in"></i>
-                                </a>
-                            </li>
-                            <li class="mx-1">
-                                <a class="social-link" href="https://github.com/tmachad" target="_blank">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-1 col-lg-2"></div>
-            </div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarColor02">
+            <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Features</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Pricing</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+            </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="text" placeholder="Search">
+            <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+            </form>
         </div>
-    </section>
-    <section>
-        <!-- Projects Section -->
-        <div class="container">
-            <div class="row">
-                <div class="col-4">
-                    <h3>
-                        <b>
-                            Projects
-                        </b>
-                    </h3>
-                </div>
-                <div class="col-8">
-                    <input id="project-search" type="text">
-                </div>
+    </nav>
+    <div class="container-fluid px-0 d-flex flex-wrap">
+        <a class="project-item" href="#">
+            <div class="thumbnail web text-center">
+                <i class="fas fa-globe"></i>
             </div>
-        </div>
-        <div class="projects-container">
-            <div class="project-item web-dev">
-                <div class="preview text-center">
-                    <i class="fas fa-globe"></i>
-                </div>
-                <h4 class="mt-2 mb-0">
-                    What Should I Play?
-                </h4>
-                <div class="tags mb-2">
-                    <span class="badge badge-primary">Web</span>
-                    <span class="badge badge-primary">Angular</span>
-                    <span class="badge badge-primary">HTML</span>
-                    <span class="badge badge-primary">CSS</span>
-                    <span class="badge badge-primary">TypeScript</span>
-                </div>
-                <p class="text-justify">
-                    Developed using Angular, What Should I Play? is an online tool for choosing which game to play out
-                    of the user's game library. The tool uses the Steam API to gather the user's game library and
-                    randomly choose games to suggest. Planned features include choosing games to play with friends and
-                    game filtering options.
-                </p>
-                <a href="#">Learn More</a>
+            <div class="tags">
+                <span class="badge badge-secondary">Web</span>
+                <span class="badge badge-secondary">CSS</span>
+                <span class="badge badge-secondary">HTML</span>
+                <span class="badge badge-secondary">JavaScript</span>
+                <span class="badge badge-secondary">NGINX</span>
+                <span class="badge badge-secondary">SASS</span>
             </div>
-            <div class="project-item game">
-                <div class="preview text-center">
-                    <i class="fas fa-gamepad"></i>
-                </div>
-                <h4 class="mt-2 mb-0">
-                    Superposition
-                </h4>
-                <div class="tags mb-2">
-                    <span class="badge badge-primary">Game</span>
-                    <span class="badge badge-primary">Unity</span>
-                    <span class="badge badge-primary">C#</span>
-                </div>
-                <p class="text-justify">
-                    Developed using Unity, Superposition is a 2D puzzle-platform game that I created in 48 hours for
-                    Discord Jam 2. Each level is split between several different alternate dimensions, with the player
-                    needing to switch between dimensions to solve puzzles and make their way to the portal at the end of
-                    the level.
-                </p>
-                <a href="#">Learn More</a>
-            </div>
-            <div class="project-item tool">
-                <div class="preview text-center">
-                    <i class="fas fa-wrench"></i>
-                </div>
-                <h4 class="mt-2 mb-0">
-                    FileSync
-                </h4>
-                <div class="tags mb-2">
-                    <span class="badge badge-primary">Tool</span>
-                    <span class="badge badge-primary">MVC</span>
-                    <span class="badge badge-primary">C#</span>
-                </div>
-                <p class="text-justify">
-                    Developed in C#, FileSync is an MVC-based tool I created to simplify the process of backing up large
-                    collections of files. It probably would have been more convenient to download a similar tool off the
-                    internet, but making my own was far more fun!
-                </p>
-                <a href="#">Learn More</a>
-            </div>
-            <div class="project-item">
-                <div class="preview text-center">
-                    <i class="fas fa-code"></i>
-                </div>
-                <h4 class="mt-2 mb-0">
-                    Sudoku Solver
-                </h4>
-                <div class="tags mb-2">
-                    <span class="badge badge-primary">TypeScript</span>
-                </div>
-                <p class="text-justify">
-                    Developed in TypeScript, Sudoku Solver is a small program I made for fun that solves sudoku puzzles
-                    (very creatively named, I know). The program solves sudoku puzzles in a similar manner as a person
-                    would: filling in squares by process of elimination, then guessing once no more deductions can be
-                    made.
-                </p>
-                <a href="#">Learn More</a>
-            </div>
-            <div class="project-item web-dev">
-                <div class="preview text-center">
-                    <i class="fas fa-globe"></i>
-                </div>
-                <h4 class="mt-2 mb-0">
+            <div class="description">
+                <h4>
                     Personal Website
                 </h4>
-                <div class="tags mb-2">
-                    <span class="badge badge-primary">Web</span>
-                    <span class="badge badge-primary">HTML</span>
-                    <span class="badge badge-primary">CSS</span>
-                    <span class="badge badge-primary">JavaScript</span>
-                </div>
                 <p class="text-justify">
-                    This is the website you're looking at right now! I developed this website as a static website using
-                    HTML, CSS, and JavaScript. On this website you can find information about me and my projects, and
-                    even play around with some of the projects too!
+                    This is the website you're looking at right now! On this website you can learn more about me and 
+                    projects, and even try out live demos of some of them!
                 </p>
-                <a href="#">Learn More</a>
             </div>
-            <div class="project-item game">
-                <div class="preview text-center">
-                    <i class="fas fa-gamepad"></i>
-                </div>
-                <h4 class="mt-2 mb-0">
+        </a>
+        <a class="project-item" href="#">
+            <div class="thumbnail game text-center">
+                <i class="fas fa-gamepad"></i>
+            </div>
+            <div class="tags">
+                <span class="badge badge-secondary">Game</span>
+                <span class="badge badge-secondary">C#</span>
+                <span class="badge badge-secondary">Unity</span>
+            </div>
+            <div class="description">
+                <h4>
                     AD Tower Defence
                 </h4>
-                <div class="tags mb-2">
-                    <span class="badge badge-primary">Game</span>
-                    <span class="badge badge-primary">Unity</span>
-                    <span class="badge badge-primary">C#</span>
-                </div>
                 <p class="text-justify">
-                    Developed using Unity, AD Tower Defence is a rogue-like tower defence game I developed as the final
-                    project of my Game Engine course. Inspired by my love of rogue-like mechanics and DotA 2's ability
-                    draft game mode, the game is played by unlocking upgrades and figuring out combinations far more
-                    powerful than the sum of its parts.
+                    A rogue-like tower defence game inspired by my love of DotA 2's ability draft game mode. Unlike a 
+                    normal tower defence game, tower's are upgraded by giving them powerful combinations of abilities
+                    discovered during gameplay.
                 </p>
-                <a href="#">Learn More</a>
             </div>
-            <div class="project-item">
-                <div class="preview text-center">
-                    <i class="fas fa-code"></i>
-                </div>
-                <h4 class="mt-2 mb-0">
+        </a>
+        <a class="project-item" href="#">
+            <div class="thumbnail text-center">
+                <i class="fas fa-code"></i>
+            </div>
+            <div class="tags">
+                <span class="badge badge-secondary">TypeScript</span>
+            </div>
+            <div class="description">
+                <h4>
+                    Sudoku Solver
+                </h4>
+                <p class="text-justify">
+                    A TypeScript library that solves a sudoku puzzle the same way a human would: process of elimination
+                    until all options are exhausted, followed by guesswork.
+                </p>
+            </div>
+        </a>
+        <a class="project-item" href="#">
+            <div class="thumbnail web text-center">
+                <i class="fas fa-globe"></i>
+            </div>
+            <div class="tags">
+                <span class="badge badge-secondary">Tool</span>
+                <span class="badge badge-secondary">Web</span>
+                <span class="badge badge-secondary">Angular</span>
+                <span class="badge badge-secondary">CSS</span>
+                <span class="badge badge-secondary">Express.js</span>
+                <span class="badge badge-secondary">HTML</span>
+                <span class="badge badge-secondary">JavaScript</span>
+                <span class="badge badge-secondary">Node.js</span>
+                <span class="badge badge-secondary">SASS</span>
+                <span class="badge badge-secondary">TypeScript</span>
+            </div>
+            <div class="description">
+                <h4>
+                    What Should I Play?
+                </h4>
+                <p class="text-justify">
+                    An online tool for randomly choosing from a library of games. Currently supports integration with
+                    the user's Steam libray.
+                </p>
+            </div>
+        </a>
+        <a class="project-item" href="#">
+            <div class="thumbnail game text-center">
+                <i class="fas fa-gamepad"></i>
+            </div>
+            <div class="tags">
+                <span class="badge badge-secondary">Game</span>
+                <span class="badge badge-secondary">Unity</span>
+                <span class="badge badge-secondary">C#</span>
+            </div>
+            <div class="description">
+                <h4>
+                    Superposition
+                </h4>
+                <p class="text-justify">
+                    A 2D puzzle platforming game where the player must navigate to the end of the level by switching
+                    between dimensions of reality while also existing in every dimension simultaneously.
+                </p>
+            </div>
+        </a>
+        <a class="project-item" href="#">
+            <div class="thumbnail tool text-center">
+                <i class="fas fa-wrench"></i>
+            </div>
+            <div class="tags">
+                <span class="badge badge-secondary">Tool</span>
+                <span class="badge badge-secondary">C#</span>
+                <span class="badge badge-secondary">MVC</span>
+            </div>
+            <div class="description">
+                <h4>
+                    FileSync
+                </h4>
+                <p class="text-justify">
+                    A Windows desktop app I created to simplify the process of repeatedly backing up large volumes of
+                    files.
+                </p>
+            </div>
+        </a>
+        <a class="project-item" href="#">
+            <div class="thumbnail text-center">
+                <i class="fas fa-code"></i>
+            </div>
+            <div class="tags">
+                <span class="badge badge-secondary">Java</span>
+            </div>
+            <div class="description">
+                <h4>
                     State Machines
                 </h4>
-                <div class="tags mb-2">
-                    <span class="badge badge-primary">Java</span>
-                </div>
                 <p class="text-justify">
-                    Developed in Java, State Machines is a library for simulating finite state machines. Developed for
-                    fun and educational purposes, I used this project to try my hand at developing a fuent interface for
-                    object construction.
+                    A Java library for simulating finite state machines. It features a fluent interface for constructing
+                    state machines.
                 </p>
-                <a href="#">Learn More</a>
             </div>
-            <div class="project-item game">
-                <div class="preview text-center">
-                    <i class="fas fa-gamepad"></i>
-                </div>
-                <h4 class="mt-2 mb-0">
+        </a>
+        <a class="project-item" href="#">
+            <div class="thumbnail game text-center">
+                <i class="fas fa-gamepad"></i>
+            </div>
+            <div class="tags">
+                <span class="badge badge-secondary">Game</span>
+            </div>
+            <div class="description">
+                <h4>
                     Minecraft Slots
                 </h4>
-                <div class="tags mb-2">
-                    <span class="badge badge-primary">Game</span>
-                    <span class="badge badge-primary">Turing</span>
-                </div>
                 <p class="text-justify">
-                    Developed in Turing, Minecraft Slots was the final project for my high school computer science
-                    class. The game is a simple slot machine themed around Minecraft, since I was a big fan of the game
-                    at the time.
+                    A simple slot machine developed for my final project of my highschool compsci class. Features a 
+                    betting system and animations for spinning slot reels. Oh, and it's all Minecraft themed.
                 </p>
-                <a href="#">Learn More</a>
             </div>
-    </section>
-    <section>
-        <!-- About Me Section -->
-        <div class="container">
-            <div class="row">
-                <div class="col-4">
-                    <h3>
-                        <b>
-                            About me
-                        </b>
-                    </h3>
-                </div>
-                <div class="col-8">
-                    <p>
-                        I am a self-starter with a passion for learning new things and making cool stuff with it! I've
-                        gotten a taste of professional software development across 2+ years of co-op and internship work
-                        terms, and I'm eager to get out into the industry. I'm looking for the next oportunity to expand
-                        and improve my skills as a software developer.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="work-experience" class="bg-secondary">
-        <!-- Work Experience Section -->
-        <div class="container">
-            <div class="row">
-                <div class="col-4">
-                    <h3>
-                        <b>
-                            Work Experience
-                        </b>
-                    </h3>
-                </div>
-                <div class="col-8">
-                    <div>
-                        <h5>
-                            <b>
-                                Cyber Security Analyst Co-op
-                            </b>
-                        </h5>
-                        <h6 class="text-muted">
-                            <i>
-                                <b>Canadian Tire Corporation</b> &nbsp; | &nbsp; May 2019 - August 2019
-                            </i>
-                        </h6>
-                        <div>
-                            <span class="badge badge-primary">
-                                Active Directory
-                            </span>
-                            <span class="badge badge-primary">
-                                Agile
-                            </span>
-                            <span class="badge badge-primary">
-                                Bootstrap
-                            </span>
-                            <span class="badge badge-primary">
-                                CSS
-                            </span>
-                            <span class="badge badge-primary">
-                                Flask
-                            </span>
-                            <span class="badge badge-primary">
-                                Git
-                            </span>
-                            <span class="badge badge-primary">
-                                HTML
-                            </span>
-                            <span class="badge badge-primary">
-                                JavaScript
-                            </span>
-                            <span class="badge badge-primary">
-                                JQuery
-                            </span>
-                            <span class="badge badge-primary">
-                                Python
-                            </span>
-                            <span class="badge badge-primary">
-                                SQL
-                            </span>
-                            <span class="badge badge-primary">
-                                SQLAlchemy
-                            </span>
-                        </div>
-                        <p>
-                            As a Cyber Security Analyst Co-op, I worked to manage and monitor the security infrastructure used at CTC. This was a great opportunity to work on my Python and Web Development skills in particular, but I also learned a lot about enterprise security systems, system management, and system monitoring.
-                            <br>
-                            Some of my favourite things I did include:
-                        </p>
-                        <ul>
-                            <li>
-                                Developing a DevOps tool for managing service configurations through Git.
-                            </li>
-                            <li>
-                                Updating several web-based monitoring dashboards with more modern designs and functionalities, dramatically improving their usability.
-                            </li>
-                            <li>
-                                Building a small Python-based search tool for quickly finding information about various systems.
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="pt-5">
-                        <h5>
-                            <b>
-                                Application Developer
-                            </b>
-                        </h5>
-                        <h6 class="text-muted">
-                            <i>
-                                <b>DAC Group</b> &nbsp; | &nbsp; September 2017 - August 2018
-                            </i>
-                        </h6>
-                        <div>
-                            <span class="badge badge-primary">
-                                Agile
-                            </span>
-                            <span class="badge badge-primary">
-                                Angular
-                            </span>
-                            <span class="badge badge-primary">
-                                ASP.NET
-                            </span>
-                            <span class="badge badge-primary">
-                                Azure
-                            </span>
-                            <span class="badge badge-primary">
-                                Bootstrap
-                            </span>
-                            <span class="badge badge-primary">
-                                C#
-                            </span>
-                            <span class="badge badge-primary">
-                                CSS
-                            </span>
-                            <span class="badge badge-primary">
-                                Git
-                            </span>
-                            <span class="badge badge-primary">
-                                HTML
-                            </span>
-                            <span class="badge badge-primary">
-                                JavaScript
-                            </span>
-                            <span class="badge badge-primary">
-                                JQuery
-                            </span>
-                            <span class="badge badge-primary">
-                                MongoDB
-                            </span>
-                            <span class="badge badge-primary">
-                                SASS
-                            </span>
-                            <span class="badge badge-primary">
-                                SQL
-                            </span>
-                        </div>
-                        <p>
-                            At DAC I worked in an agile environment doing web development for several products and internal tools. I was able to improve and broaden my skills to include working with MongoDB, SQL, and ASP.NET, as well as gain some valuable experience working in a professional agile environment for the first time.
-                            <br>
-                            Some of the highlights from my time at DAC include:
-                        </p>
-                        <ul>
-                            <li>
-                                Creating a command-line tool to refresh Facebook access tokens in seconds, all but removing the downtime that occurred when they became invalid.
-                            </li>
-                            <li>
-                                Improving application logging and log filtering, which dramatically reduced the amount of time I (and other developers) had to spend sifting through logs.
-                            </li>
-                            <li>
-                                Working with clients to gather requirements as the developer of an internal employee management tool.
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="pt-5">
-                        <h5>
-                            <b>
-                                Research Assistant (USRA)
-                            </b>
-                        </h5>
-                        <h6 class="text-muted">
-                            <i>
-                                <b>Western University</b> &nbsp; | &nbsp; May 2017 - August 2017
-                            </i>
-                        </h6>
-                        <div>
-                            <span class="badge badge-primary">
-                                Git
-                            </span>
-                            <span class="badge badge-primary">
-                                Jasmine
-                            </span>
-                            <span class="badge badge-primary">
-                                Java
-                            </span>
-                            <span class="badge badge-primary">
-                                RxJS
-                            </span>
-                            <span class="badge badge-primary">
-                                TypeScript
-                            </span>
-                        </div>
-                        <p>
-                            During my time as an Undergraduate Student Research Assistant at Western, I worked under Dr. McIsaac to develop a new web-based teaching tool for simulating microcontrollers. This project was fascinating to me, as I got to learn more about the inner workings of microcontrollers while improving my knowledge of TypeScript and web development. With a strong emphasis on clean code and unit testing, I also learned a lot about how to keep my code easy to read and maintain, and how to unit test thoroughly.
-                            <br>
-                            My favourite parts of this position were:
-                        </p>
-                        <ul>
-                            <li>
-                                Designing bit-level simulations of CPU components using a data-push architecture to better simulate how an actual microcontroller functions.
-                            </li>
-                            <li>
-                                Developing thorough unit tests for all components I designed using Jasmine, which was a great learning experience.
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="pt-5">
-                        <h5>
-                            <b>
-                                Co-op Programmer
-                            </b>
-                        </h5>
-                        <h6 class="text-muted">
-                            <i>
-                                <b>FCT</b> &nbsp; | &nbsp; May 2016 - August 2016
-                            </i>
-                        </h6>
-                        <div>
-                            <span class="badge badge-primary">
-                                C#
-                            </span>
-                            <span class="badge badge-primary">
-                                ColdFusion
-                            </span>
-                            <span class="badge badge-primary">
-                                SQL
-                            </span>
-                            <span class="badge badge-primary">
-                                TFS
-                            </span>
-                            <span class="badge badge-primary">
-                                Visual Basic
-                            </span>
-                        </div>
-                        <p>
-                            As a Co-op Programmer at FCT, I worked extensively with Microsoft SQL databases, C# and
-                            Visual Basic applications, and Cold Fusion web pages. During my co-op term my main project
-                            was migrating documents to a new file generation system, which required a deep understanding
-                            of the inner workings of both the new and old file generation systems, as well as the SQL
-                            databases that the documents were built from. In addition, some smaller tasks I worked on
-                            included patching SQL injection vulnerabilities and improving user experience in one of
-                            FCT's many products. To my knowledge, most of my work is currently being used in production
-                            environments at FCT.
-                        </p>
-                    </div>
-                    <div class="pt-5">
-                        <h5>
-                            <b>
-                                IT Support Technician
-                            </b>
-                        </h5>
-                        <h6 class="text-muted">
-                            <i>
-                                <b>Superheat FGH</b> &nbsp; | &nbsp; May 2015 - August 2015
-                            </i>
-                        </h6>
-                        <div>
-                            <span class="badge badge-primary">
-                                Active Directory
-                            </span>
-                            <span class="badge badge-primary">
-                                Public Key Infrastructure
-                            </span>
-                            <span class="badge badge-primary">
-                                Windows
-                            </span>
-                        </div>
-                        <p>
-                            As an IT Support Technician I maintained and updated core data structures, company
-                            computers, and network infrastructure. My primary task was to resolve any technical issues
-                            that arose as quickly as possible; any other available time was spent on other projects,
-                            such as the aforementioned data structure maintenance.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section>
-        <!-- Education Section -->
-        <div class="container">
-            <div class="row">
-                <div class="col-4">
-                    <h3>
-                        <b>
-                            Education
-                        </b>
-                    </h3>
-                </div>
-                <div class="col-8">
-                    <div>
-                        <h5>
-                            <b>
-                                BESc in Software Engineering
-                            </b>
-                        </h5>
-                        <h6 class="text-muted">
-                            <b>Western University</b> &nbsp; | &nbsp; September 2014 - June 2019
-                        </h6>
-                        <p>
-                            I graduated with distinction from the Software Engineering program at Western University in
-                            June of 2019 after completing my four years of study, plus a one-year work placement.
-                        </p>
-                        <p>
-                            While at Western I had the opportunity to learn how to manage my time in a crunch, work in a
-                            team, and manage large projects. Events like Hack Western and the Western Engineering
-                            Competition (WEC) were particularly helpful (and fun!), especially when it came to learning
-                            time management and teamwork since we had to work in a small team to complete our designs
-                            within a relatively short time frame. Clubs like WE Bots and WEGA were great for practicing
-                            teamwork and leadership skills; I even helped start up the recurring WE Bots Battle Bots
-                            event! Big projects like my <a href="https://github.com/sarwhelan/cubesat-mission-ops"
-                                target="_blank">fourth year capstone project</a> were perfect opportunities to hone my
-                            project management and development skills.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <footer>
-        <!-- Footer -->
-    </footer>
+        </a>
+    </div>
 </body>
 
 </html>

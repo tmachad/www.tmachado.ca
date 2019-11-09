@@ -1,0 +1,79 @@
+$project-item-size: 15rem;
+
+@import "./bootswatch";
+@import "./fontawesome";
+
+.project-item {
+    display: inline-block;
+    position: relative;
+
+    color: unset;
+    text-decoration: unset;
+
+    height: $project-item-size;
+    width: $project-item-size;
+
+    flex: 1 0 auto;
+
+    &:hover {
+        color: unset;
+        text-decoration: unset;
+    }
+
+    .thumbnail {
+        display: block;
+
+        height: 100%;
+        width: 100%;
+
+        line-height: $project-item-size;
+        font-size: $project-item-size / 2;
+
+        background-color: #707070;
+
+        &.web {
+            background-color: #2189b3;
+        }
+
+        &.game {
+            background-color: #43912f;
+        }
+
+        &.tool {
+            background-color: #bb771f;
+        }
+    }
+
+    .tags {
+        position: absolute;
+
+        bottom: 0;
+        left: 0;
+        right: 0;
+
+        background-color: #000000B0;
+        
+        padding: 0.5rem;
+    }
+
+    .description {
+        position: absolute;
+
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+
+        padding: 0.75rem;
+
+        background-color: #000000B0;
+
+        opacity: 0;
+        transition: opacity 0.3s ease;
+
+        &:hover {
+            opacity: 1;
+            transition: opacity 0.3s ease;
+        }
+    }
+}
