@@ -6,9 +6,10 @@ $(document).ready(function() {
 
     $("#project-search").tagInput({
         classNames: {
-            overall: "tag-input form-control h-auto",
-            tag: "tag badge badge-primary"
+            overall: "tag-input form-control h-auto w-100",
+            tag: "tag badge badge-secondary mr-1"
         },
+        placeholderText: "Search Projects By Tag",
         useDefaultStyle: false,
         typeaheadjs: {
             classNames: {
