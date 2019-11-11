@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<html>
+<html class="h-100">
 
 <head>
     <title>Tom Machado</title>
@@ -21,12 +21,9 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="/styles/index.css">
-
-    <!-- Custom Scripts -->
-    <script src="/scripts/index.js"></script>
 </head>
 
-<body>
+<body class="d-flex flex-column h-100">
     <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="/index.html">tmachado</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-items"
@@ -37,172 +34,36 @@
         <div class="collapse navbar-collapse" id="navbar-items">
             <ul class="navbar-nav">
                 <li class="nav-item">
+                    <a class="nav-link" href="/projects/index.html">Projects</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="/about-me.html">About Me</a>
                 </li>
             </ul>
-            <form class="form-inline flex-fill">
-                <input id="project-search" class="form-control" type="text">
-            </form>
         </div>
     </nav>
-    <div class="container-fluid px-0 d-flex flex-wrap">
-        <a class="project-item" href="/projects/personal-website/index.html">
-            <div class="thumbnail web text-center">
-                <i class="fas fa-globe"></i>
+    <div class="container flex-fill d-flex flex-column justify-content-center">
+        <div class="row">
+            <div class="col">
+                <h1 class="text-center display-1">
+                    Hi there!
+                </h1>
+                <h5 class="text-center text-muted">
+                    Welcome to my website, where you can check out all the cool stuff I work on in my free time, or 
+                    learn more about me. 
+                    <br>
+                    Click one of the buttons below to check it out!
+                </h5>
+                <div class="d-flex justify-content-center flex-wrap">
+                    <a class="btn btn-secondary btn-lg m-1" role="button" href="/projects/index.html">
+                        Check Out Projects
+                    </a>
+                    <a class="btn btn-secondary btn-lg m-1" role="button" href="about-me.html">
+                        Learn About Me
+                    </a>
+                </div>
             </div>
-            <div class="tags">
-                <span class="badge badge-secondary">Web</span>
-                <span class="badge badge-secondary">CSS</span>
-                <span class="badge badge-secondary">HTML</span>
-                <span class="badge badge-secondary">JavaScript</span>
-                <span class="badge badge-secondary">NGINX</span>
-                <span class="badge badge-secondary">SASS</span>
-            </div>
-            <div class="description">
-                <h4>
-                    Personal Website
-                </h4>
-                <p class="text-justify">
-                    This is the website you're looking at right now! On this website you can learn more about me and
-                    projects, and even try out live demos of some of them!
-                </p>
-            </div>
-        </a>
-        <a class="project-item" href="/projects/adtd/index.html">
-            <div class="thumbnail game text-center">
-                <i class="fas fa-gamepad"></i>
-            </div>
-            <div class="tags">
-                <span class="badge badge-secondary">Game</span>
-                <span class="badge badge-secondary">C#</span>
-                <span class="badge badge-secondary">Unity</span>
-            </div>
-            <div class="description">
-                <h4>
-                    AD Tower Defence
-                </h4>
-                <p class="text-justify">
-                    A rogue-like tower defence game inspired by my love of DotA 2's ability draft game mode. Unlike a
-                    normal tower defence game, tower's are upgraded by giving them powerful combinations of abilities
-                    discovered during gameplay.
-                </p>
-            </div>
-        </a>
-        <a class="project-item" href="/projects/sudoku-solver/index.html">
-            <div class="thumbnail text-center">
-                <i class="fas fa-code"></i>
-            </div>
-            <div class="tags">
-                <span class="badge badge-secondary">TypeScript</span>
-            </div>
-            <div class="description">
-                <h4>
-                    Sudoku Solver
-                </h4>
-                <p class="text-justify">
-                    A TypeScript library that solves a sudoku puzzle the same way a human would: process of elimination
-                    until all options are exhausted, followed by guesswork.
-                </p>
-            </div>
-        </a>
-        <a class="project-item" href="/projects/what-should-i-play/index.html">
-            <div class="thumbnail web text-center">
-                <i class="fas fa-globe"></i>
-            </div>
-            <div class="tags">
-                <span class="badge badge-secondary">Tool</span>
-                <span class="badge badge-secondary">Web</span>
-                <span class="badge badge-secondary">Angular</span>
-                <span class="badge badge-secondary">CSS</span>
-                <span class="badge badge-secondary">Express.js</span>
-                <span class="badge badge-secondary">HTML</span>
-                <span class="badge badge-secondary">JavaScript</span>
-                <span class="badge badge-secondary">Node.js</span>
-                <span class="badge badge-secondary">SASS</span>
-                <span class="badge badge-secondary">TypeScript</span>
-            </div>
-            <div class="description">
-                <h4>
-                    What Should I Play?
-                </h4>
-                <p class="text-justify">
-                    An online tool for randomly choosing from a library of games. Currently supports integration with
-                    the user's Steam libray.
-                </p>
-            </div>
-        </a>
-        <a class="project-item" href="/projects/superposition/index.html">
-            <div class="thumbnail game text-center">
-                <i class="fas fa-gamepad"></i>
-            </div>
-            <div class="tags">
-                <span class="badge badge-secondary">Game</span>
-                <span class="badge badge-secondary">Unity</span>
-                <span class="badge badge-secondary">C#</span>
-            </div>
-            <div class="description">
-                <h4>
-                    Superposition
-                </h4>
-                <p class="text-justify">
-                    A 2D puzzle platforming game where the player must navigate to the end of the level by switching
-                    between dimensions of reality while also existing in every dimension simultaneously.
-                </p>
-            </div>
-        </a>
-        <a class="project-item" href="/projects/filesync/index.html">
-            <div class="thumbnail tool text-center">
-                <i class="fas fa-wrench"></i>
-            </div>
-            <div class="tags">
-                <span class="badge badge-secondary">Tool</span>
-                <span class="badge badge-secondary">C#</span>
-                <span class="badge badge-secondary">MVC</span>
-            </div>
-            <div class="description">
-                <h4>
-                    FileSync
-                </h4>
-                <p class="text-justify">
-                    A Windows desktop app I created to simplify the process of repeatedly backing up large volumes of
-                    files.
-                </p>
-            </div>
-        </a>
-        <a class="project-item" href="/projects/state-machines/index.html">
-            <div class="thumbnail text-center">
-                <i class="fas fa-code"></i>
-            </div>
-            <div class="tags">
-                <span class="badge badge-secondary">Java</span>
-            </div>
-            <div class="description">
-                <h4>
-                    State Machines
-                </h4>
-                <p class="text-justify">
-                    A Java library for simulating finite state machines. It features a fluent interface for constructing
-                    state machines.
-                </p>
-            </div>
-        </a>
-        <a class="project-item" href="/projects/minecraft-slots/index.html">
-            <div class="thumbnail game text-center">
-                <i class="fas fa-gamepad"></i>
-            </div>
-            <div class="tags">
-                <span class="badge badge-secondary">Game</span>
-            </div>
-            <div class="description">
-                <h4>
-                    Minecraft Slots
-                </h4>
-                <p class="text-justify">
-                    A simple slot machine developed for my final project of my highschool compsci class. Features a
-                    betting system and animations for spinning slot reels. Oh, and it's all Minecraft themed.
-                </p>
-            </div>
-        </a>
+        </div>
     </div>
 </body>
 

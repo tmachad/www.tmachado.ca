@@ -1,7 +1,7 @@
 $project-item-size: 15rem;
 
-@import "./bootswatch";
-@import "./fontawesome";
+@import "../bootswatch";
+@import "../fontawesome";
 
 .project-item {
     display: inline-block;
@@ -19,7 +19,7 @@ $project-item-size: 15rem;
         color: unset;
         text-decoration: unset;
     }
-
+    
     .thumbnail {
         display: block;
 
