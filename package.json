@@ -28,5 +28,17 @@
   "bugs": {
     "url": "https://github.com/tmachad/www.tmachado.ca/issues"
   },
-  "homepage": "https://github.com/tmachad/www.tmachado.ca#readme"
+  "homepage": "https://github.com/tmachad/www.tmachado.ca#readme",
+  "prettier": {
+    "tabWidth": 4,
+    "printWidth": 120,
+    "overrides": [
+      {
+        "files": "*.json",
+        "options": {
+          "tabWidth": 2
+        }
+      }
+    ]
+  }
 }

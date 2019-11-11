@@ -1,6 +1,6 @@
 $(document).ready(function() {
     let possibleTags = $(".project-item span.badge").map(function() {
-        return this.innerText
+        return this.innerText;
     });
     let uniqueTags = [...new Set(possibleTags)].sort();
 
@@ -22,7 +22,7 @@ $(document).ready(function() {
                         let matches = [];
                         let regex = RegExp(query, "i");
 
-                        uniqueTags.forEach((tag) => {
+                        uniqueTags.forEach(tag => {
                             if (regex.test(tag)) {
                                 matches.push(tag);
                             }
@@ -38,18 +38,20 @@ $(document).ready(function() {
     $("#project-search").change(function() {
         let val = $(this).val();
         let searchTags = val == "" ? [] : val.split(",");
-        
 
         if (searchTags.length > 0) {
             // There are tags to search by, so filter project items by them
             $(".project-item").each(function() {
                 let elem = $(this);
-                let tags = elem.find("span.badge").map(function() {
-                    return this.innerText;
-                }).get();
-                
+                let tags = elem
+                    .find("span.badge")
+                    .map(function() {
+                        return this.innerText;
+                    })
+                    .get();
+
                 let result = true;
-                searchTags.forEach(tag => result = result && tags.includes(tag));
+                searchTags.forEach(tag => (result = result && tags.includes(tag)));
 
                 if (result) {
                     elem.removeClass("hide");
@@ -61,7 +63,7 @@ $(document).ready(function() {
             // No tags to search by, so show all projects
             $(".project-item").each(function() {
                 $(this).removeClass("hide");
-            })
+            });
         }
     });
 });

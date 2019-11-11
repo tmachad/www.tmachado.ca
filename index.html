@@ -1,70 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-<html class="h-100">
+    <html class="h-100">
+        <head>
+            <title>Tom Machado</title>
 
-<head>
-    <title>Tom Machado</title>
+            <meta charset="utf-8" />
 
-    <meta charset="utf-8" />
+            <!-- JQuery -->
+            <script src="/node_modules/jquery/dist/jquery.min.js"></script>
 
-    <!-- JQuery -->
-    <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+            <!-- Bootstrap JavaScript -->
+            <script src="/node_modules/popper.js/dist/umd/popper.min.js"></script>
+            <script src="/node_modules/bootstrap/dist/js/bootstrap.js"></script>
 
-    <!-- Bootstrap JavaScript -->
-    <script src="/node_modules/popper.js/dist/umd/popper.min.js"></script>
-    <script src="/node_modules/bootstrap/dist/js/bootstrap.js"></script>
+            <!-- Tag Input -->
+            <script src="/node_modules/typeahead.js/dist/typeahead.bundle.js"></script>
+            <script src="/node_modules/jq-tag-input/jq-tag-input.min.js"></script>
+            <link rel="stylesheet" href="/node_modules/jq-tag-input/jq-tag-input.min.css" />
 
-    <!-- Tag Input -->
-    <script src="/node_modules/typeahead.js/dist/typeahead.bundle.js"></script>
-    <script src="/node_modules/jq-tag-input/jq-tag-input.min.js"></script>
-    <link rel="stylesheet" href="/node_modules/jq-tag-input/jq-tag-input.min.css">
+            <!-- Styles -->
+            <link rel="stylesheet" href="/styles/index.css" />
+        </head>
 
-    <!-- Styles -->
-    <link rel="stylesheet" href="/styles/index.css">
-</head>
+        <body class="d-flex flex-column h-100">
+            <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+                <a class="navbar-brand" href="/index.html">tmachado</a>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#navbar-items"
+                    aria-controls="navbar-items"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-<body class="d-flex flex-column h-100">
-    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="/index.html">tmachado</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-items"
-            aria-controls="navbar-items" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbar-items">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="/projects/index.html">Projects</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/about-me.html">About Me</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-    <div class="container flex-fill d-flex flex-column justify-content-center">
-        <div class="row">
-            <div class="col">
-                <h1 class="text-center display-1">
-                    Hi there!
-                </h1>
-                <h5 class="text-center text-muted">
-                    Welcome to my website, where you can check out all the cool stuff I work on in my free time, or 
-                    learn more about me. 
-                    <br>
-                    Click one of the buttons below to check it out!
-                </h5>
-                <div class="d-flex justify-content-center flex-wrap">
-                    <a class="btn btn-secondary btn-lg m-1" role="button" href="/projects/index.html">
-                        Check Out Projects
-                    </a>
-                    <a class="btn btn-secondary btn-lg m-1" role="button" href="about-me.html">
-                        Learn About Me
-                    </a>
+                <div class="collapse navbar-collapse" id="navbar-items">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/projects/index.html">Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/about-me.html">About Me</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="container flex-fill d-flex flex-column justify-content-center">
+                <div class="row">
+                    <div class="col">
+                        <h1 class="text-center display-1">
+                            Hi there!
+                        </h1>
+                        <h5 class="text-center text-muted">
+                            Welcome to my website, where you can check out all the cool stuff I work on in my free time,
+                            or learn more about me.
+                            <br />
+                            Click one of the buttons below to check it out!
+                        </h5>
+                        <div class="d-flex justify-content-center flex-wrap">
+                            <a class="btn btn-secondary btn-lg m-1" role="button" href="/projects/index.html">
+                                Check Out Projects
+                            </a>
+                            <a class="btn btn-secondary btn-lg m-1" role="button" href="about-me.html">
+                                Learn About Me
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-</body>
-
+        </body>
+    </html>
 </html>
