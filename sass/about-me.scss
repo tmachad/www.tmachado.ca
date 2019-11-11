@@ -11,3 +11,12 @@
 .profile-image {
     width: 100%;
 }
+
+ul.experience {
+    list-style: none;
+    padding-left: 0;
+
+    ul.highlights {
+        list-style: disc;
+    }
+}
