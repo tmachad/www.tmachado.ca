@@ -1,17 +1,40 @@
 @import "./bootswatch";
 @import "./fontawesome";
 
-.profile-image-container {
-    height: 100%;
+.profile-container {
+    width: 30%;
+    float: left;
 
     display: flex;
     flex-direction: column;
-    justify-content: center;
 }
 
 .profile-image {
-    width: 30%;
-    float: left;
+    width: 100%;
+}
+
+.contact-info {
+    background-color: $secondary;
+
+    min-width: 2.5rem;
+    min-height: 2.5rem;
+
+    line-height: 2.5rem;
+    border-radius: 1.25rem;
+
+    &.stretchy {
+        @media (min-width: map-get($grid-breakpoints, "md")) {
+            padding: 0 0.75rem;
+        }
+
+        @media (max-width: map-get($grid-breakpoints, "md")) {
+            text-align: center;
+        }
+    }
+
+    &:not(.stretchy) {
+        text-align: center;
+    }
 }
 
 ul.experience {
@@ -21,4 +44,19 @@ ul.experience {
     ul.highlights {
         list-style: disc;
     }
+}
+
+a.unstyled-link,
+a.unstyled-link:hover {
+    color: unset;
+    text-decoration: none;
+}
+
+.break {
+    flex-basis: 100%;
+    height: 0;
+}
+
+footer {
+    height: 4rem;
 }
