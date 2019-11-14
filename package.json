@@ -4,10 +4,19 @@
   "description": "This is my website! This is just the initial readme.",
   "main": "index.html",
   "dependencies": {
-    "jq-tag-input": "^1.1.4"
+    "bootstrap": "^4.3.1",
+    "jq-tag-input": "^1.1.4",
+    "jquery": "^3.4.1",
+    "popper.js": "^1.16.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.11.2",
+    "http-server": "^0.11.1",
+    "sass": "^1.23.3"
+  },
   "scripts": {
+    "run": "http-server ./ -o",
+    "build": "sass sass/:styles/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,5 +28,17 @@
   "bugs": {
     "url": "https://github.com/tmachad/www.tmachado.ca/issues"
   },
-  "homepage": "https://github.com/tmachad/www.tmachado.ca#readme"
+  "homepage": "https://github.com/tmachad/www.tmachado.ca#readme",
+  "prettier": {
+    "tabWidth": 4,
+    "printWidth": 120,
+    "overrides": [
+      {
+        "files": "*.json",
+        "options": {
+          "tabWidth": 2
+        }
+      }
+    ]
+  }
 }

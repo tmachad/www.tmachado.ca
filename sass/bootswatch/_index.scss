@@ -1,0 +1,5 @@
+// Holds any and all configuration related to bootstrap so that it can easily be imported with a single @import
+
+@import "variables";
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+@import "bootswatch";
