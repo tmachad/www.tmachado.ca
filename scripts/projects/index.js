@@ -54,15 +54,15 @@ $(document).ready(function() {
                 searchTags.forEach(tag => (result = result && tags.includes(tag)));
 
                 if (result) {
-                    elem.removeClass("hide");
+                    elem.show(); //.removeClass("hide");
                 } else {
-                    elem.addClass("hide");
+                    elem.hide(); //.addClass("hide");
                 }
             });
         } else {
             // No tags to search by, so show all projects
             $(".project-item").each(function() {
-                $(this).removeClass("hide");
+                $(this).show(); //.removeClass("hide");
             });
         }
     });
