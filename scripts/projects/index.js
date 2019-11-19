@@ -11,10 +11,12 @@ $(document).ready(function() {
         },
         placeholderText: "Search Projects By Tag",
         useDefaultStyle: false,
+        deleteWithBackspace: true,
         typeaheadjs: {
             classNames: {
                 menu: "tt-menu form-control my-2 ml-n2 h-auto w-auto"
             },
+            exactMatchOnly: true,
             datasets: [
                 {
                     name: "tags",
