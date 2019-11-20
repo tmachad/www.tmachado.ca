@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Tom Machado</title>
+
+        <meta charset="utf-8" />
+
+        <!-- JQuery -->
+        <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+
+        <!-- Bootstrap JavaScript -->
+        <script src="/node_modules/popper.js/dist/umd/popper.min.js"></script>
+        <script src="/node_modules/bootstrap/dist/js/bootstrap.js"></script>
+
+        <!-- Tag Input -->
+        <script src="/node_modules/typeahead.js/dist/typeahead.bundle.js"></script>
+        <script src="/node_modules/jq-tag-input/jq-tag-input.min.js"></script>
+        <link rel="stylesheet" href="/node_modules/jq-tag-input/jq-tag-input.min.css" />
+
+        <!-- Styles -->
+        <link rel="stylesheet" href="/styles/projects/personal-website.css" />
+    </head>
+
+    <body>
+        <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="/index.html">tmachado</a>
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbar-items"
+                aria-controls="navbar-items"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbar-items">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/projects/index.html">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about-me.html">About Me</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h1 class="text-center my-4">
+                        Personal Website
+                    </h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-4 order-md-last">
+                    <div class="card my-2">
+                        <div class="card-header">
+                            Check it out!
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                                <i class="fas fa-globe larger mr-2"></i>
+                                <a href="www.tmachado.ca">www.tmachado.ca</a>
+                            </li>
+                            <li class="list-group-item">
+                                <i class="fab fa-github larger mr-2"></i>
+                                <a href="github.com/tmachad/www.tmachado.ca">github.com/tmachad/www.tmachado.ca</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-12 col-md-8">
+                    <h3>
+                        First, Some Context
+                    </h3>
+                    <p>
+                        Ever since I got into web development I thought it would be awesome to have a website of my very
+                        own. And as my skills have improved and I've started to enter the workforce, building a cool
+                        website seemed like it would be a good self-marketing tool too!
+                    </p>
+                    <p>
+                        I actually made an attempt at making my own website way back in 2016/2017 and host it myself on
+                        a server put together from spare PC parts lying around my basement. At this point I didn't have
+                        the skills or drive I have now, so it never got past a single raw, unstyled html page. It didn't
+                        even stay up that long, since this was also my first attempt at building and running a server,
+                        as well as hosting a web server. The server kept shutting down for unknown reasons (probably
+                        power flickers) and eventually I moved on to other projects and the server stayed dead.
+                    </p>
+                    <p>
+                        But what you're looking at right now is attempt number two! I started revisiting the idea of a
+                        personal website in late 2018 and early 2019, and this time I had an additional two years of
+                        schooling and a lot more web development experience to leverage. The website is very much still
+                        under development, but I'm already happy with how far I've come with it, and I'm looking forward
+                        to continuing to work on it!
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <h3>
+                        Under The Hood
+                    </h3>
+                    <p>
+                        The technologies I used are:
+                    </p>
+                    <p>
+                        <span class="badge badge-secondary mb-1">
+                            HTML
+                        </span>
+                        <span class="badge badge-secondary mb-1">
+                            SASS/SCSS
+                        </span>
+                        <span class="badge badge-secondary mb-1">
+                            JavaScript
+                        </span>
+                        <span class="badge badge-secondary mb-1">
+                            Bootstrap
+                        </span>
+                        <span class="badge badge-secondary mb-1">
+                            JQuery
+                        </span>
+                    </p>
+                    <p>
+                        I know, I know, I can already hear you say
+                        <i
+                            >"but we have all these modern web frameworks, why the heck would you go back to early 2000s
+                            web development?!?!"</i
+                        >
+                        I'm not crazy, I swear! I actually decided to do this because I had never previously developed a
+                        full website without using a framework of some kind, and I wanted to learn more about the base
+                        technologies that all these modern frameworks are built upon and what sort of limitations
+                        inspired them. That, and I wanted to keep this website as simple as possible, since I want it to
+                        be a showcase for my projects and a place for interested people to learn more about me.
+                    </p>
+                    <p>
+                        Other cool technical stuff about this project:
+                    </p>
+                    <ul>
+                        <li>
+                            This webiste is hosted on an NGINX server running behind an NGINX reverse proxy, all running
+                            on my home server.
+                        </li>
+                        <li>
+                            I've got continuous integration set up for this through my Jenkins server, so every time I
+                            commit to the master branch of the repo the website is built and deployed to the server! It
+                            was super fun to set up, and now it saves me a ton of time when making changes! Like the
+                            change that adds this page to the website, come to think of it...
+                        </li>
+                        <li>
+                            You might have noticed that there are no backend technologies in that list, and you would be
+                            right! Because of how simple I'm keeping it, the website itself doesn't have any backend
+                            functionality to worry about, so everything is baked into the HTML and JavaScript. This has
+                            it's pros and cons for sure, but it keeps things simple and has been an interesting design
+                            challenge to work with.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
